@@ -42,12 +42,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
       width: result.width,
       public_id: result.public_id,
       format: result.format,
+      resource_type: result.resource_type,
     });
     i++;
   }
 
   const currentPhoto = reducedResults.find(
-    (img) => img.id === Number(context.params.photoId),
+    (img) => img.id === Number(context.params.photoId)
   );
   currentPhoto.blurDataUrl = await getBase64ImageUrl(currentPhoto);
 

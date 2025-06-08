@@ -34,14 +34,30 @@ export default function Carousel({
         className="absolute inset-0 z-30 cursor-default bg-black backdrop-blur-2xl"
         onClick={closeModal}
       >
-        <Image
-          src={currentPhoto.blurDataUrl}
-          className="pointer-events-none h-full w-full"
-          alt="blurred background"
-          fill
-          priority={true}
-        />
+        {currentPhoto.resource_type === "image" && currentPhoto.blurDataUrl ? (
+          <Image
+            src={currentPhoto.blurDataUrl}
+            className="pointer-events-none h-full w-full"
+            alt="blurred background"
+            fill
+            priority={true}
+          />
+        ) : (
+          <video
+            className="pointer-events-none h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source
+              src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/${currentPhoto.public_id}.mp4`}
+              type="video/mp4"
+            />
+          </video>
+        )}
       </button>
+
       <SharedModal
         index={index}
         changePhotoId={changePhotoId}
