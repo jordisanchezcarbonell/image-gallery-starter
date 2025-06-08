@@ -8,19 +8,25 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="See pictures from Next.js Conf and the After Party."
+            content="Explore the anime-style gallery of Jordi Sánchez featuring high-quality illustrations and videos. Creativity, style, and personality in every frame."
           />
           <meta property="og:site_name" content="nextjsconf-pics.vercel.app" />
           <meta
             property="og:description"
-            content="See pictures from Next.js Conf and the After Party."
+            content="Discover the anime-style world of Jordi Sánchez through photos, videos, and visual highlights."
           />
-          <meta property="og:title" content="Next.js Conf 2022 Pictures" />
+          <meta
+            property="og:title"
+            content="Jordi Sánchez Gallery | Anime-Inspired Photos & Videos"
+          />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Next.js Conf 2022 Pictures" />
+          <meta
+            name="twitter:title"
+            content="Jordi Sánchez Gallery | Anime-Inspired Photos & Videos"
+          />
           <meta
             name="twitter:description"
-            content="See pictures from Next.js Conf and the After Party."
+            content="Explore photos and videos of Jordi Sánchez in anime style."
           />
         </Head>
         <body className="bg-black antialiased">
